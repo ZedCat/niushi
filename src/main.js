@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 // 导入ui组件库
 import Vant from 'vant'
-import 'vant/lib/index.css'
+import 'vant/lib/index.less'
 Vue.use(Vant)
 Vue.config.productionTip = false
 
