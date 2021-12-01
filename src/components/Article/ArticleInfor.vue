@@ -7,18 +7,14 @@
           <!-- 标题 -->
           <span>{{ title }}</span>
           <!-- 单张图片 -->
-          <!-- <img
-            src="https://www.escook.cn/vuebase/pics/1.png"
-            alt=""
-            class="thumb"
-          /> -->
+          <img :src="imgsrc1" alt="" class="thumb" />
         </div>
         <!-- 三张图片 -->
-        <div class="thumb-box">
+        <!-- <div class="thumb-box">
           <img :src="imgsrc1" alt="" class="thumb" />
           <img :src="imgsrc2" alt="" class="thumb" />
           <img :src="imgsrc3" alt="" class="thumb" />
-        </div>
+        </div> -->
       </template>
       <!-- label 区域的插槽 -->
       <template #label>
@@ -44,14 +40,6 @@ export default {
       default: ''
     },
     imgsrc1: {
-      type: String,
-      default: ''
-    },
-    imgsrc2: {
-      type: String,
-      default: ''
-    },
-    imgsrc3: {
       type: String,
       default: ''
     },
