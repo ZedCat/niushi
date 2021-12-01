@@ -2,17 +2,27 @@
   <div class="home-container">
     <!-- 头部标题 -->
     <van-nav-bar title="牛事" fixed />
-    <h1>111</h1>
-    <h1>222</h1>
-    <h1>333</h1>
-    <h1>444</h1>
-    <h1>555</h1>
+
+    <ArticleInfor
+      v-for="item in newsList"
+      :key="item.uniquekey"
+      :title="item.title"
+      :imgsrc1="item.thumbnail_pic_s"
+      :imgsrc2="item.thumbnail_pic_s02"
+      :imgsrc3="item.thumbnail_pic_s03"
+      :author="item.author_name"
+      :comments="item.is_content"
+      :publishdate="item.date"
+      :urt="item.url"
+    ></ArticleInfor>
   </div>
 </template>
 
 <script>
 import { getNewsList } from '@/API/newsAPI.js'
+import ArticleInfor from '@/components/Article/ArticleInfor.vue'
 export default {
+  components: { ArticleInfor },
   data () {
     return {
       type: 'top',
