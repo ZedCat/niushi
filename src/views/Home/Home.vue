@@ -79,20 +79,21 @@ export default {
       if (res.result.data.length === 0) {
         this.finished = true
       }
+    },
+    // 上拉加载更多，请求更多数据
+    onLoad() {
+      console.log('触发了上拉加载事件')
+      this.page++
+      this.getList()
+    },
+    // 下拉刷新
+    onRefresh() {
+      console.log('触发了下拉刷新事件')
+      this.page++
+      this.getList(true)
     }
-  },
-  // 上拉加载更多，请求更多数据
-  onLoad() {
-    console.log('触发了上拉加载事件')
-    this.page++
-    this.getList()
-  },
-  // 下拉刷新
-  onRefresh() {
-    console.log('触发了下拉刷新事件')
-    this.page++
-    this.getList(true)
   }
+
 }
 </script>
 
